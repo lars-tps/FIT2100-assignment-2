@@ -13,6 +13,7 @@ typedef struct {
     int entryTime; // The time process entered system
     int serviceTime; // The total CPU time required by the process
     int remainingTime; // Remaining service time until completion
+    int deadline; // The time process should try to finish executing BEFORE.
 
     process_state_t state; // current process state (e.g READY)
 } pcb_t;
