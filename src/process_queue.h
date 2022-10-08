@@ -1,6 +1,5 @@
+#include "./libraries.h"
 #include "./pcb.h"
-#include <stdio.h>
-#include <stdlib.h>
 #define MAX_BUFFER_SIZE 100
 
 /* Min-priority node */
