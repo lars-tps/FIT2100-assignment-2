@@ -35,6 +35,8 @@ node** read_from_file(FILE *file) {
     pcb_t *ptr_first_process = (pcb_t *) malloc(sizeof(pcb_t)); // will be freed when popped
     ptr_first_process = &first_process;
 
-    node *incoming_queue = new_node(ptr_first_process, 0);
-    return &incoming_queue;
+    node *first_node = new_node(ptr_first_process, 0);
+    node **incoming_queue = &first_node;
+    return incoming_queue;
+}
 }
