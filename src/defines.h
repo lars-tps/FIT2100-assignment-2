@@ -1,1 +1,2 @@
 #define MAX_BUFFER_SIZE 100
+#define MAX_FILE_LINES 100
