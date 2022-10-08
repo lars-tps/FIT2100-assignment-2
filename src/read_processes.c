@@ -32,6 +32,9 @@ node** read_from_file(FILE *file) {
         .state = READY,
         .exitTime = -1
     };
-    node *incoming_queue = new_node(&first_process, 0);
+    pcb_t *ptr_first_process = malloc(sizeof(pcb_t));
+    ptr_first_process = &first_process;
+
+    node *incoming_queue = new_node(ptr_first_process, 0);
     return &incoming_queue;
 }
