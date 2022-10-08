@@ -32,7 +32,7 @@ node** read_from_file(FILE *file) {
         .state = READY,
         .exitTime = -1
     };
-    pcb_t *ptr_first_process = malloc(sizeof(pcb_t));
+    pcb_t *ptr_first_process = (pcb_t *) malloc(sizeof(pcb_t)); // will be freed when popped
     ptr_first_process = &first_process;
 
     node *incoming_queue = new_node(ptr_first_process, 0);
