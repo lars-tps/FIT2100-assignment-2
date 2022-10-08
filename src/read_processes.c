@@ -20,5 +20,10 @@
 #include "./read_processes.h"
 
 node** read_from_file(FILE *file) {
-    
+    char line_data[MAX_LINE_LEN];
+    fgets(line_data, MAX_LINE_LEN, file);
+
+    while (!feof(file) && !ferror(file)) {
+
+    }
 }
