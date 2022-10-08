@@ -1,3 +1,4 @@
 #define MAX_BUFFER_SIZE 100
 #define MAX_FILE_LINES 100
 #define MAX_LINE_LEN 100
+#define NUM_PCB_FIELDS 7

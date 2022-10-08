@@ -111,56 +111,56 @@ void show_queue(node** root) {
     }
 }
 
-int main() {
-    // testing code
-    pcb_t first = {
-        .process_name = 'A',
-        .entryTime = 0,
-        .serviceTime = 3,
-        .remainingTime = 3,
-        .deadline = 5,
-        .state = READY
-        };
-    pcb_t second = {
-        .process_name = 'B',
-        .entryTime = 1,
-        .serviceTime = 6,
-        .remainingTime = 6,
-        .deadline = 7,
-        .state = READY
-        };
-    pcb_t third = {
-        .process_name = 'C',
-        .entryTime = 4,
-        .serviceTime = 4,
-        .remainingTime = 4,
-        .deadline = 6,
-        .state = READY
-        };
-    pcb_t fourth = {
-        .process_name = 'D',
-        .entryTime = 6,
-        .serviceTime = 2,
-        .remainingTime = 2,
-        .deadline = 2,
-        .state = READY
-        };
-    pcb_t fifth = {
-        .process_name = 'E',
-        .entryTime = 7,
-        .serviceTime = 2,
-        .remainingTime = 2,
-        .deadline = 8,
-        .state = READY
-        };
+// int main() {
+//     // testing code
+//     pcb_t first = {
+//         .process_name = 'A',
+//         .entryTime = 0,
+//         .serviceTime = 3,
+//         .remainingTime = 3,
+//         .deadline = 5,
+//         .state = READY
+//         };
+//     pcb_t second = {
+//         .process_name = 'B',
+//         .entryTime = 1,
+//         .serviceTime = 6,
+//         .remainingTime = 6,
+//         .deadline = 7,
+//         .state = READY
+//         };
+//     pcb_t third = {
+//         .process_name = 'C',
+//         .entryTime = 4,
+//         .serviceTime = 4,
+//         .remainingTime = 4,
+//         .deadline = 6,
+//         .state = READY
+//         };
+//     pcb_t fourth = {
+//         .process_name = 'D',
+//         .entryTime = 6,
+//         .serviceTime = 2,
+//         .remainingTime = 2,
+//         .deadline = 2,
+//         .state = READY
+//         };
+//     pcb_t fifth = {
+//         .process_name = 'E',
+//         .entryTime = 7,
+//         .serviceTime = 2,
+//         .remainingTime = 2,
+//         .deadline = 8,
+//         .state = READY
+//         };
 
-    node* pq = new_node(&first, 5);
-    insert(&pq, &second, 7);
-    insert(&pq, &third, 6);
-    insert(&pq, &fourth, 2);
-    insert(&pq, &fifth, 8);
+//     node* pq = new_node(&first, 5);
+//     insert(&pq, &second, 7);
+//     insert(&pq, &third, 6);
+//     insert(&pq, &fourth, 2);
+//     insert(&pq, &fifth, 8);
  
-    show_queue(&pq);
+//     show_queue(&pq);
  
-    return 0;
-}
+//     return 0;
+// }

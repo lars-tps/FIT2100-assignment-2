@@ -22,8 +22,16 @@
 node** read_from_file(FILE *file) {
     char line_data[MAX_LINE_LEN];
     fgets(line_data, MAX_LINE_LEN, file);
-
-    while (!feof(file) && !ferror(file)) {
-
-    }
+    char **splitted_line = stringsplitter(line_data);
+    pcb_t first_process = {
+        .process_name = splitted_line[0],
+        .entryTime = splitted_line[1],
+        .serviceTime = splitted_line[2],
+        .deadline = splitted_line[3],
+        .remainingTime = splitted_line[2],
+        .state = READY,
+        .exitTime = -1
+    };
+    node *incoming_queue = new_node(&first_process, 0);
+    return &incoming_queue;
 }

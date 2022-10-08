@@ -1,2 +1,4 @@
 #include "./libraries.h"
-#include <string.h>
+#include "./defines.h"
+
+char** stringsplitter(char *string);
