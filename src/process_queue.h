@@ -1,6 +1,7 @@
 #include "./libraries.h"
+#include "./defines.h"
 #include "./pcb.h"
-#define MAX_BUFFER_SIZE 100
+
 
 /* Min-priority node */
 typedef struct node {
