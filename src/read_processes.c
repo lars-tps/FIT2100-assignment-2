@@ -19,6 +19,6 @@
 
 #include "./read_processes.h"
 
-node** read_from_file(int fd) {
+node** read_from_file(FILE *file) {
     
 }
