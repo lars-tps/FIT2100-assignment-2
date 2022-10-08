@@ -87,7 +87,8 @@ pcb_t* pop(node** root) {
     node *temp = *root;
     pcb_t *ptr_process = (*temp).ptr_process;
     (*root) = (*root)->next; // switch root node to the next in queue
-    free(temp); // free the malloced resources
+    free(temp->ptr_process); // free the contained process pointer
+    free(temp); // free the node
 
     return ptr_process;
 }
