@@ -39,4 +39,14 @@ node** read_from_file(FILE *file) {
     node **incoming_queue = &first_node;
     return incoming_queue;
 }
+
+int main() {
+    FILE *file;
+    file = fopen("file.txt", "r");
+
+    node** incoming_queue = read_from_file(file);
+    show_queue(incoming_queue);
+
+    pop(incoming_queue);
+    show_queue(incoming_queue);
 }
