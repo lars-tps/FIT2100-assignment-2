@@ -11,8 +11,8 @@ LAST MODIFIED:  6 Oct 2022
 
  */
 
-#include "./libraries.h";
-#include "./read_processes.h";
+#include "./libraries.h"
+#include "./read_processes.h"
 
 int main() {
     FILE *file;
