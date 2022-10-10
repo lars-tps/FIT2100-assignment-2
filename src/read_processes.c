@@ -23,7 +23,7 @@ node** read_from_file(FILE *file) {
     ptr_first_process = &first_process;
 
     node *first_node = new_node(ptr_first_process, 0);
-    node **incoming_queue = (node *) malloc(sizeof(first_node));
+    node **incoming_queue = (node **) malloc(sizeof(&first_node));
     incoming_queue = &first_node;
     return incoming_queue;
 }
