@@ -11,7 +11,7 @@ node** read_from_file(FILE *file) {
     fgets(line_data, MAX_LINE_LEN, file);
     char **splitted_line = stringsplitter(line_data);
     pcb_t first_process = {
-        .process_name = splitted_line[0],
+        .process_name = *splitted_line[0],
         .entryTime = atoi(splitted_line[1]),
         .serviceTime = atoi(splitted_line[2]),
         .deadline = atoi(splitted_line[3]),
@@ -43,7 +43,7 @@ node** read_from_file(FILE *file) {
 */
 char** stringsplitter(char *string) {
     int i = 0;
-    char *splitted_string[4] = (char**) calloc(4, sizeof(char*)); // we only have 4 fields in input string
+    char **splitted_string = (char**) calloc(4, sizeof(char*)); // we only have 4 fields in input string
 
     char *ptr_token = strtok(string, " ");
 
