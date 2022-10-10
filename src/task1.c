@@ -11,6 +11,16 @@ LAST MODIFIED:  6 Oct 2022
 
  */
 
-#include <stdio.h>
-#include "./pcb.h"
+#include "./libraries.h";
+#include "./read_processes.h";
 
+int main() {
+    FILE *file;
+    file = fopen("file.txt", "r");
+
+    node** incoming_queue = read_from_file(file);
+    show_queue(incoming_queue);
+
+    pop(incoming_queue);
+    show_queue(incoming_queue);
+}

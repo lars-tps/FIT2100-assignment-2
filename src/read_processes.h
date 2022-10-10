@@ -1,6 +1,5 @@
 #include "./libraries.h"
 #include "./process_queue.h"
-#include "./pcb.h"
-#include "./stringsplitter.h"
 
+char** stringsplitter(char *string);
 node** read_from_file(FILE *file);
